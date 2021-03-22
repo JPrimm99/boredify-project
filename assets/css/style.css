@@ -1,148 +1,106 @@
-/* color options (from melting clock image): 
-cantaloupe #FDA172; 
-spice #7A3803 
-blonde #FEEB75
-dark gray #2b2b2b
-dark rust #2b0601
-bronze #CD7F32
-dark brown #140d05
-light tan #E5D3B3
-greenish #90ee90*/
-
-:root {
-    /* background-color:black; */
-    background-image: url(../images/backgroundpatch2.jpg);
-    background-repeat: repeat;
-    /* position:absolute; */
-
+* {
+    box-sizing: unset;
 }
 
+:root {
+    background-image: url(../images/backgroundpatch2.jpg);
+    background-repeat: repeat;
+}
 
+html,
 body {
-    /* font-size: 1.5rem; */
-    font-size: 95%;
-    /* background-color: #140d05; */
+    height: 100%;
+    position: relative;
     display: block;
 }
 
+
+.main-container {
+    min-height: 80%;
+    overflow: hidden;
+    display: block;
+    margin-bottom: 5rem;
+}
+
+/* hero header */
 .hero.is-info .title {
     font-size: 3rem;
     color: #E5D3B3;
     text-align: left;
-    /* font-family: BadTyp Regular; */
 }
 
 .hero.is-info .subtitle {
     color: #E5D3B3;
     text-align: right;
-    /* font-family: BadTyp Regular; */
     margin-bottom: 0px;
+    margin-top: 3rem;
 }
-
-h2 {
-    font-size: 2.5rem;
+.hero {
+    text-align: center;
+    height: 23rem;
+    font-family: badtyp, sans-serif;
+    text-shadow: 3px 3px black;
+    background-image: url('../images/meltingClockExpanded.jpg');
+    background-position: center;
 }
 
 h3 {
     font-size: 2rem;
-    margin-bottom: 1rem;
     font-family: chauncy-pro;
     font-weight: 400;
     font-style: normal;
     text-align: center;
     color: #E5D3B3;
-}
-
-.favorites {
-    color: #E5D3B3;
     margin-left: 2rem;
-    background-image: url(../images/backgroundpatch2.jpg);
-    background-repeat: repeat;
-}
-
-.col-header {
-    color: #E5D3B3;
 }
 
 p {
     align-self: center;
-    /* margin-left: 2em; */
-    margin-bottom: .5rem;
-    padding: 15px;
-    vertical-align:auto;
-    color: #E5D3B3;
-}
-.hero {
-    text-align: center;
-    height: 370px;
-    font-family: badtyp, sans-serif;
-}
-
-.hero-body{
-    background-image: url('../images/meltingClockExpanded.jpg');
-    /* height: 400px; */
-    background-position: center;
+    justify-content: center;
+    width: 100%; 
+    font-size: 1.25rem;
 }
 
 .section {
     padding-top: none;
     margin: none;
-    background-image: url(../images/backgroundpatch2.jpg);
-    background-repeat: repeat;
     text-align: center;
     justify-items: center;
     display: block;
-}
-.favorites {
-    /* background-color: #140d05; */
-    margin-left: 2rem;
+    width: 100%;
 }
 
-.favorites > ul > li {
-    margin-bottom: 1.5em;
-}
-
-.splash {
-    /* background-color: #020804; */
-    position: relative;
-}
-/* 
-.splash > ul > li {
-    margin-bottom: 1.5em;
-} */
-
-/* ??? can't figure out how to center all buttons */
-.button {
+.apiBody {
+    font-family: chauncy-pro;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    color: #E5D3B3;
+    font-size: 24pt;
+    padding-bottom: 0px;
     justify-content: center;
+    align-items: center;
+    display: block;
 }
 
-.jokeBody {
-    font-family: chauncy-pro;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-    color: #E5D3B3;
-    font-size: 24pt;
-    padding-bottom: 0px;
+.apiBody > button {
+    margin: 3rem!important;
 }
 
-.boredBody {
-    font-family: chauncy-pro;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-    color: #E5D3B3;
-    font-size: 24pt;
-    padding-bottom: 0px;
+#funnyImage {
+    max-height: 500px;
+    width: auto;
 }
 
-
+#user-input {
+    justify-content: center;
+    align-items: center;
+}
 
 .clock-button{
     max-height: 70px;
     margin-bottom: .5rem;
-    /* vertical-align:20px; */
-    display: block;
+    display: flex;
     padding: 0;
 }
 
@@ -153,44 +111,14 @@ p {
     font-size: 110%;
 }
 
-#funnyImage {
-    max-height: 280px;
-    width: auto;
-}
-
-.random-image-btn {
-    /* justify-content: center; why isn't this working?? */
-    margin-bottom: 1.5em;
-    margin-top: 1.5em;
-    /* align-self:center; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-
 .button.is-info {
-    background-color: #7A3803;
-    /* display:grid; */
-    justify-content: center;
-    align-items: center;
-}
-
-.image-col {
-    /* background-color: #140d05; */
-    /* margin-right: 2rem; */
+    background-color: #661c00;
     justify-self: center;
-    background-image: url(../images/backgroundpatch2.jpg);
-    background-repeat: repeat;
- }
-
-
-#cat-meme {
-    max-height: 200px;
-}
-
-.catBody > p {
-    font-size: 30px;
+    align-self: center;
+    font-size: 12pt;
+    margin: 10pt;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .image > img {
@@ -199,10 +127,25 @@ p {
     margin-right: auto;
 }
 
+#cat-meme {
+    max-height: 200px;
+    margin-top: 10pt;
+}
+
+.field > p {
+    width: auto;
+    display: block;
+}
+
+#bored-meme {
+    max-height: 400px;
+}
+
 #rdm-image {
     display: flex;
     flex-direction: column;
     align-items: center;
+    clear:both;
 }
 
 .linkedIn {
@@ -210,16 +153,39 @@ p {
     max-height: 1.25rem;
 }
 
-.footer {
-    padding: 10px;
+.custom-footer {
+    padding: 10px 0px!important;
     font-family: 'Orbitron', sans-serif;
-    margin-top: auto;
-    margin-bottom: 0px;
-    /* position: fixed; */
-    bottom: 0;
-    left: 0;
     width: 100%;
-    background-image: url(../images/backgroundpatch2.jpg);
-    background-repeat: repeat;
     display: block;
+    background-color: black;
+    border-top-style: solid;
+    border-top-color: gray;
+}
+
+.footer-custom-inner{
+    bottom: 0;
+    margin-right: 4rem;
+    padding: 0;
+}
+
+.footer-title {
+    text-align: center;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+.link-text{
+    align-self: flex-start;
+    margin-block-start: 0!important;
+    margin-inline-start: 0;
+    padding: 0;
+    justify-self: left;
+    text-align: left;
+}
+
+#favoriteList {
+    color: #E5D3B3;
+    font-size: 18px;
+    font-family: chauncy-pro;
 }
